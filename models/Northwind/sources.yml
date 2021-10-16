@@ -4,3 +4,10 @@ sources:
   - name: northwind_elt
     tables:
       - name: orders
+      - name: customers
+        columns:
+          - name: customer_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
