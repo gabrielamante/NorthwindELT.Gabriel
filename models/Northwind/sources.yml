@@ -1,6 +1,6 @@
-version 2
+version: 2
 
 sources:
-    - name: northwind_erp
-    table:
-        - name: orders
+  - name: northwind_elt
+    tables:
+      - name: orders
