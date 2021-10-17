@@ -11,3 +11,24 @@ sources:
             tests:
                 - unique
                 - not_null
+      - name: suppliers
+        columns:
+          - name: supplier_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+      - name: products
+        columns:
+          - name: product_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+      - name: shippers
+        columns:
+          - name: shipper_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
