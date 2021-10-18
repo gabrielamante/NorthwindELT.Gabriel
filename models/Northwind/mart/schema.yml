@@ -42,3 +42,5 @@ models:
             tests:
                 - unique
                 - not_null
+    - name: fact_order_details
+      description: "Tabela de fatos"
