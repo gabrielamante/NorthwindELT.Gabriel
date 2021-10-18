@@ -6,18 +6,18 @@ with products as (
     )
     , orders as (
     select order_id
-        from {{ ref('dim_suppliers') }}
+        from {{ ref('fact_orders') }}
     )
-    , orders_details_final as (
+    , o_details as (
     select
         orders.order_id
         , products.product_id
-        , order_details.unit_price
-        , order_details.quantity
-        , order_details.discount
+        , unit_price
+        , quantity
+        , discount
     from {{ ref('stg_order_details') }} order_details
     left join orders on order_details.order_id = orders.order_id
     left join products on order_details.product_id = products.product_id
 )
 
-select * from order_details_final
+select * from o_details
